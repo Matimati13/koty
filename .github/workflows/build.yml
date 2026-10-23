@@ -16,6 +16,7 @@ jobs:
         with:
           gradle-version: '8.9'
       - run: bash setup.sh
+      - run: python3 patch.py
       - run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
       - run: gradle assembleDebug --no-daemon
         working-directory: koty
