@@ -513,4 +513,16 @@ public class MainActivity extends Activity {
                     String s = "Z imieniem: " + named + " z " + list.size();
                     if (best >= 0) s += "  •  Najodważniejszy: " + bestName + " (" + best + ")";
                     sub.setText(s);
-                    sub.setVisibility(View.VISI
+                                       sub.setVisibility(View.VISIBLE);
+                }
+                if (openKey != null) {
+                    for (Cat k : list) {
+                        if (k.key.equals(openKey)) { show(k); break; }
+                    }
+                    openKey = null;
+                }
+            });
+        });
+    }
+}
+EOF
